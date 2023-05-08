@@ -10,5 +10,10 @@
   "description": "",
   "devDependencies": {
     "serverless-pseudo-parameters": "^2.6.1"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "fixed": "^0.3.1",
+    "mustache": "^4.2.0"
   }
 }
