@@ -2,7 +2,7 @@ service: todos
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs18.x
   region: us-west-2
   environment:
     DYNAMODB_TABLE: ${self:service}-${opt:stage, self:provider.stage}
@@ -25,6 +25,13 @@ functions:
           path: todos
           method: post
           cors: true
+  read:
+    handler: functions/read.read
+    events:
+      - http:
+          path: todos
+          method: get
+          cros: true
 
 resources:
   Resources:
