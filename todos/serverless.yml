@@ -33,6 +33,14 @@ functions:
           method: get
           cros: true
 
+  update:
+    handler: functions/update.update
+    events:
+      - http:
+          path: todos/{id}
+          method: put
+          cros: true
+
 resources:
   Resources:
     TodosDynamoDbTable:
